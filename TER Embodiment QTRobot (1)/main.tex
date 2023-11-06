@@ -1,0 +1,143 @@
+\documentclass[a4paper, twoside]{report}
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{caption}
+\usepackage{lipsum}
+\usepackage{mathtools}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{rotating}
+
+% ------------------------------------------------------------------------------------------
+%% Making a list of acronyms
+\usepackage{acro}
+\usepackage[acronym]{glossaries}
+\makeglossaries
+
+% Make your acronym list here:
+
+\newacronym{ad}{AD}{Alzheimer's Disease} % The argument in the first pair of braces is the reference label, the second is the abbreviation in the text, and the third is the full meaning of the abbreviation.
+\newacronym{who}{WHO}{World Health Organization} 
+
+% ------------------------------------------------------------------------------------------
+
+
+
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0pt}{2ex}{0ex}
+\titlespacing{\subsection}{0pt}{1ex}{1ex}
+\titlespacing{\subsubsection}{0pt}{0.5ex}{1ex}
+
+\titleformat{\section}
+  {\normalfont\fontsize{18}{40}\bfseries}{\thesection}{1em}{}
+  
+%% Sets page size and margins
+\usepackage[a4paper,top=2.8cm,bottom=2.8cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+
+% ------------------------------------------------------------------------------------------
+% NOTE: Use this section for the temporary manuscript only
+%             Omit this section when printing the final, revised manuscript
+%             You should also remove the line: "\linenumbers" below 
+%             (before "\input{introduction.tex}")
+
+% Line Numbering on the left side
+\usepackage[left]{lineno}
+% ------------------------------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    %linkcolor=blue, enlever commentaire pour avoir le sommaire en bleu
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={TER : Embodiment QTRobot},
+    pdfpagemode=FullScreen,
+    }
+
+% ------------------------------- TITLE ---------------------------------------
+
+% MODIFY THIS SECTION
+
+\title{EMBODIMENT QTROBOT}
+
+% Update names of proponents and supervisor in title.tex
+
+% --------------------------------------------------------------------------------
+
+
+% ----------------------------------------------------------------------------------
+% THIS IS THE BEGINNING OF THE MANUSCRIPT PROPER
+% ----------------------------------------------------------------------------------
+
+\begin{document}
+\input{title.tex} % Putting the title page
+
+% ------------------------------- ABSTRACT ---------------------------------
+
+% MODIFY THIS SECTION
+
+\vspace*{6cm}
+\hspace{3cm}\huge{\textbf{Summary of our project}} \large \\
+\\
+\begin{center}
+\hspace{\parindent} \textit{The aim of this paper is to study the effect of physical appearance on human-robot interaction. To this end, we set up an experiment to study the comparison of interactions between a human and respectively a physical robot and its virtual avatar in 3D. For this purpose, the qt-robot was used in the context of a "Wizard of oz" type dialogue. The participants of the experiment were either adults or children and one of the results obtained was to highlight the difference in perception (cheating, emotions) between the two groups. We also observed a difference between the perception of cheating in relation to the different embodiments of the robot.}
+ \\
+
+%Ajouter points forts / se vendre\\
+\end{center}
+\clearpage
+% --------------------------------------------------------------------------------
+
+% -------------------- ACKNOWLEDGEMENTS ------------------------
+
+% MODIFY THIS SECTION
+
+\section*{Thanks} \large
+
+We would like to express our deepest gratitude to our project supervisor, Ms. Croitoru, for her support and expertise throughout this project. Her invaluable advice contributed greatly to the success of this experience.\\
+\\
+We would also like to thank the students, children and all those who generously gave up their time to take part in our experiment. Their commitment and cooperation were essential to the data collection and success of this study. In particular, we would like to thank all those who participated enthusiastically and contributed significantly to our work.\\
+\\
+Finally, we would like to express our gratitude to all those who, in any way, contributed to this project. \\
+
+% --------------------------------------------------------------------------------
+
+
+% -------------------- OTHER SECTIONS -------------------------------
+
+% DO NOT MODIFY THIS SECTION
+
+% Just modify the contents of the individual sections in their
+% respective .tex files
+
+\tableofcontents % Inserts the table of contents
+
+% --------------------------------------------------------------------------------
+% Start line numbering
+%\linenumbers
+
+% NOTE: Remove this line for the final, revised manuscript
+
+% --------------------------------------------------------------------------------
+
+\input{introduction.tex}
+\input{analyseexist}
+\input{rapptechnique}
+\input{limitations}
+\input{experience}
+\input{analysedata}
+\input{gestionprojet}
+\input{conclusion}
+\input{bibliographie}
+
+\clearpage
+\printglossary[type=\acronymtype]
+
+
+\end{document}
